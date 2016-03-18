@@ -1,0 +1,53 @@
+<!--Izabela Diniz Pagani e Larissa Rodrigues Pereira-->
+<!DOCTYPE html>
+<html lang ="pt-br">
+	<head>
+		<title > Exercício 1 </title> 
+		<meta charset=" utf-8" >
+		<link rel="stylesheet" type="text/css" href="estilos.css" media="all">
+
+		<script>
+			function limpa() {
+				if(document.getElementById('form1').value!="") {
+				document.getElementById('form1').value="";
+				document.getElementById('form2').value="";
+				document.getElementById('form3').value="";
+			}
+			};
+			function mostraAlerta() {
+				alert (" Dados gravados com sucesso! ") ;
+			}
+			function veriemail(){
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="Titulo">
+			<h1> Formulário de inscrição </h1> <hr> <br> <br>
+		</div>
+		<form>
+			<strong> Nome: </strong>
+			<input type="text" name="nome" id="form1">
+			<br>
+			<br>
+			<strong> Data de nascimento: </strong> 
+			<input type="text" name="data" id="form2">
+			</form>
+			<br>
+			<strong> E-mail: </strong> 
+			<input type="email" required="required" id="form3" class="input-text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="Enviar"/>
+		</form>
+			<br>
+			<br>
+		<div class="Botoes">
+			<input type="button" value="Limpar" onClick="limpa()">
+			<input type="button" value="Enviar" onClick="mostraAlerta()">
+		</div>
+		
+		
+		
+		
+		</form>
+	</body>
+</html>
