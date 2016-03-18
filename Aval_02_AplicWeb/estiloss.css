@@ -1,0 +1,19 @@
+#form1{
+	position: relative;
+	left: 124px;
+	
+}
+#form2{
+	position: relative;
+	left: 0px;
+}
+#form3{
+	position: relative;
+	left: 120px;
+}
+
+.Limpar{
+	position: relative;
+	left: 5px
+}
+
