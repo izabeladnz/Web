@@ -2,9 +2,11 @@ $(document).ready(function(e){
 	$("#dialog-confirm").hide();
 	$(".menuPrincipal a").click(function(e){
 		e.preventDefault();
-		var href = $(this).attr('href');
-		$(".conteudo").load(href + ".conteudo");
+		var href=$(this).attr('href');
+		$(".conteudo").load(href + " .conteudo");
 	});
+	
+	
 });
 
 function dialogo(){
@@ -15,12 +17,12 @@ function dialogo(){
 		modal:true,
 		buttons:{
 			"Confirma": function(){
-				var nome = document.querySelector("#nome").value;
+				var nome= document.querySelector("#nome").value;
 				var tamnome = nome.length;
 				var validanome = false;
 				for(var i=0; i<=tamnome; i++){
 					if ( nome[i] == ' '){
-						var n = nome.split(' ');
+						var n = nome= document.querySelector("#nome").value.split(' ');
 						if ( n[0] >= 3){
 							if ( n[1] >= 4){
 								validanome = true;
@@ -28,15 +30,15 @@ function dialogo(){
 						}
 					}
 				}
-				var email = document.querySelector("#email").value;
+				var email= document.querySelector("#email").value;
 				var tamemail = email.length;
 				var validaemail = false;
 				for(var j=0; j<=tamemail; j++){
 					if ( email[j] == '@'){
-						var e = email.split('@');
+						var e = email= document.querySelector("#email").value.split('@');
 						if ( e[0] >= 3){
 							if ( e[1] >= 4){
-								validaemail = true;
+								validaemail=true;
 							}
 						}
 					}
