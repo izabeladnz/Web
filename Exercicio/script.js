@@ -1,26 +1,34 @@
 $(document).ready(function(e){
-	$("#dialog-confirm").hide();
-	$(".menuPrincipal a").click(function(e){
+	$("#dialogo").hide();
+	$(".menuPrincipal a ").click(function(e){
 		e.preventDefault();
 		var href=$(this).attr('href');
-		$(".conteudo").load(href + " .conteudo");
+		$(".conteudo").load(href+" .conteudo");
 	});
 	$(".sobre").click(function(e){
 		e.preventDefault();
-		var href = $(this).attr('href');
-		$(".conteudo").load(href + " .conteudo");
+		var href=$(this).attr('href');
 		$(".comentario").hide();
-		$(".menuPrincipal").hide();		
+		$(".menuPrincipal").hide();
+		$(".conteudo").load(href+" .conteudo");
 	});
 	$(".links").click(function(e){
 		e.preventDefault();
-		var href = $(this).attr('href');
-		$(".conteudo").load(href + " .conteudo");
-		$(".comentario").hide();		
-		$(".menuPrincipal").hide();	
+		var href=$(this).attr('href');
+		$(".conteudo").load(href+" .conteudo");
+		$(".comentario").hide();
+		$(".menuPrincipal").hide();
+
+	});
+	$(".inicio").click(function(e){
+		e.preventDefault();
+		var href=$(this).attr('href');
+		$(".conteudo").load(href+" .conteudo");
+		$(".comentario").show();
+		$(".menuPrincipal").show();
 	});
 	
-	
+
 });
 
 function dialogo(){
