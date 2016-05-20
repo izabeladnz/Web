@@ -33,6 +33,41 @@
             	 echo "Senha não confere <br>";
             	 $camposOK = false; 
              }
+
+			$dataD = substr($dtNasc, 0, 2);
+			$dataM = substr($dtNasc, 3, 2);
+			$dataA = substr($dtNasc, 6, 4);
+			
+			$dia = (int)$dataD;
+			$mes = (int)$dataM;	
+			$ano = (int)$dataA;
+
+			if ( ( $mes == 1) || ( $mes == 3) || ( $mes == 5) || ( $mes == 7) || ( $mes == 8) || ( $mes == 10) || ( $mes == 12) ){
+				if ( ( $dia < 1) || ( $dia > 31) ) {
+					echo "Data incorreta.<br>";
+					$camposOK = false;
+				}
+			} else if ( ( $mes == 4) || ( $mes == 6) || ( $mes == 9) || ( $mes == 11) ){
+				if ( ( $dia < 1) || ( $dia > 30) ) {
+					echo "Data incorreta.<br>";
+					$camposOK = false;
+				}
+			} else if ( $mes == 2) {
+				if ( ((( $ano % 4) == 0) && (( $ano % 100) != 0) ) || (( $ano % 400) == 0) ) {
+					if ( ( $dia < 1) || ( $dia > 29) ) {
+						echo "Data incorreta.<br>";
+						$camposOK = false;
+					}
+			} else {
+				if ( ( $dia < 1) || ( $dia > 28) ) {
+					echo "Data incorreta.<br>";
+					$camposOK = false;
+				}
+			}
+			} else {
+				echo "Data incorreta.<br>";
+				$camposOK = false;
+				}
             
 							 //COMPLETAR
           
