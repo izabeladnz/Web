@@ -1,0 +1,28 @@
+<div class="conteudo">
+		<form method="post" name="formCadastro" action="processa.php" enctype="multipart/form-data">
+			<h1>Cadastro de Fornecedores</h1>
+			<table width="100%">
+				<tr>
+					<th width="18%"> Nome </th>
+					<td width="82%"><input type="text" name="txtNome"></td>
+				</tr>
+				<tr>
+					<th> Data Pedido </th>
+					<td><input id="datap" type="text" name="txtData"></td>
+                    <script>
+		            	$("#datap").mask("99/99/9999");
+		        	</script>
+				</tr>
+				<tr>
+					<th width="18%"> Email </th>
+					<td width="82%"><input type="text" name="txtEmail"></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td><input type="submit" name="btnEnviar" value="Enviar">
+						<input type="reset" name="btnLimpar" value="Limpar"></td>
+				</tr>
+			</table>
+		</form>
+</div>
