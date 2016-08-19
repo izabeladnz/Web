@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Máquina: localhost
--- Data de Criação: 08-Jul-2016 às 09:09
+-- Data de Criação: 19-Ago-2016 às 10:49
 -- Versão do servidor: 5.5.47-0ubuntu0.14.04.1
 -- versão do PHP: 5.5.9-1ubuntu4.14
 
@@ -32,14 +32,15 @@ CREATE TABLE IF NOT EXISTS `Cliente` (
   `dataCadastro` datetime NOT NULL,
   `email` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idCliente`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Extraindo dados da tabela `Cliente`
 --
 
 INSERT INTO `Cliente` (`idCliente`, `nome`, `dataCadastro`, `email`) VALUES
-(34, 'gfhf', '0000-00-00 00:00:00', '');
+(35, 'Izabela', '2016-08-18 00:00:00', 'izabela@hotmail.com'),
+(36, 'Larissa', '2016-08-18 00:00:00', 'larissa@hotmail.com');
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,15 @@ CREATE TABLE IF NOT EXISTS `Fornecedor` (
   `dataCadastro` datetime NOT NULL,
   `email` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idFornecedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Extraindo dados da tabela `Fornecedor`
+--
+
+INSERT INTO `Fornecedor` (`idFornecedor`, `nome`, `dataCadastro`, `email`) VALUES
+(2, 'izabela', '2016-08-18 00:00:00', 'izabela@hotmail.com'),
+(3, 'Larissa', '2016-08-18 00:00:00', 'larissa@hotmail.com');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
